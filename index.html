@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Fakhri✨</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+    <style>
+       
+        .tombol-volume {
+            position: fixed;
+            top: 80px;         
+            right: 30px;       
+            background-color: #1eb99a; 
+            color: white;
+            padding: 12px 18px; 
+            border-radius: 50px; 
+            box-shadow: 0 4px 15px rgba(30, 185, 154, 0.4); 
+            border: none;
+            cursor: pointer;
+            font-size: 20px;   
+            z-index: 9999;     
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .tombol-volume:hover {
+            background-color: #179b81;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(30, 185, 154, 0.6);
+        }
+
+        .layar-kunci {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            color: white;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            font-family: sans-serif;
+        }
+
+        .layar-kunci.hilang {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .layar-kunci h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .layar-kunci p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #cbd5e1;
+        }
+
+        .btn-buka {
+            background: linear-gradient(135deg, #1eb99a, #3b82f6);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-buka:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(30, 185, 154, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+<div id="layarKunci" class="layar-kunci">
+    <h2>Halo! Selamat Datang 🙌</h2>
+    <p>Siap untuk menjelajah dunia kreatifku?</p>
+    <button id="tombolBuka" class="btn-buka">Buka Portofolio</button>
+</div>
+    <nav class="navbar">
+        <div class="logo">Muhammad Fakhri Junaedi<span class="dot">✨</span></div>
+        <ul class="nav-links">
+            <li><a href="#beranda">Hai!</a></li>
+            <li><a href="#tentang">Siapa Saya?</a></li>
+            <li><a href="#perjalanan">Jejak Langkah</a></li>
+            <li><a href="#proyek">Karya Seru</a></li>
+            <li><a href="#kontak">Ngobrol Yuk</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+    <section id="beranda" class="hero">
+        <div class="hero-content">
+            <div class="badge">Selamat Datang di Dunia Saya! 🚀</div>
+            <h1>Halo semuanya, <br>Saya <span class="highlight">Fakhri/ii!</span></h1>
+            <h2>Seorang <span id="typing-text" class="highlight-light"></span></h2>
+            <p class="description">
+                Selamat datang di portofolio santai saya! Di sini bukan cuma berisi deretan kode yang rumit, tapi juga cerita tentang proses ngulik hal baru, pusing mikirin <em>error</em>, sampai kelegaan luar biasa waktu programnya jalan dengan lancar. 🙌
+            </p>
+            <div class="hero-buttons">
+                <a href="#proyek" class="btn btn-primary">Intip Karya Saya</a>
+                <a href="#kontak" class="btn btn-outline">Sapa Saya <i class="fas fa-hand-sparkles"></i></a>
+            </div>
+        </div>
+        <div class="hero-img animasi-mengambang">
+            <img src="ofkhrii.jpeg" alt="Fakhri">
+            <div class="floating-icon icon-1"><i class="fab fa-html5"></i></div>
+            <div class="floating-icon icon-2"><i class="fas fa-bug"></i></div>
+        </div>
+    </section>
+
+    <section id="tentang" class="about">
+        <h2 class="section-title">Siapa Sih <span>ii?</span> 🤔</h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p>Saya adalah Maba <strong>Sistem Informasi</strong> yang punya ketertarikan bikin sesuatu di layar laptop! Saya suka mengubah ide-ide spontan menjadi tampilan web yang bisa diklik, dimainkan, dan dinikmati orang lain.</p>
+                <p>Motto saya: <strong>"Lebih baik mencoba dan menemukan 20 error, daripada tidak pernah mencoba sama sekali."</strong> Karena daripada takut salah, mendingan belajar dari kesalahan dan terus berkembang.</p>
+                
+                <div class="skills">
+                    <span class="skill-tag tombol-skill-animasi" style="--tag-color: #e34f26;"><i class="fab fa-html5"></i> Tukang HTML</span>
+                    <span class="skill-tag tombol-skill-animasi" style="--tag-color: #264de4;"><i class="fab fa-css3-alt"></i> Penghias CSS</span>
+                    <span class="skill-tag tombol-skill-animasi" style="--tag-color: #f7df1e;"><i class="fab fa-js"></i> Pawang JS</span>
+                    <span class="skill-tag tombol-skill-animasi" style="--tag-color: #3776ab;"><i class="fab fa-python"></i> Penjinak Python</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="perjalanan" class="timeline-section">
+        <h2 class="section-title">Jejak <span>Langkah</span> 👣</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Cerita singkat perjalanan dan ketertarikan saya di dunia IT.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot bg-pink"><i class="fas fa-users"></i></div>
+                <div class="timeline-content">
+                    <h3>Organisasi COMIT</h3>
+                    <p>Mempunyai ketertarikan di dunia IT dengan mengikuti organisasi <strong>Community of Information Technology</strong>. Memiliki minat pada Divisi Programmer untuk terus mempelajari dalam coding.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot bg-tosca"><i class="fas fa-code"></i></div>
+                <div class="timeline-content">
+                    <h3>Menyelami Front-End & Logika Data</h3>
+                    <p>Berawal dari rasa penasaran menulis tag HTML pertama, hingga akhirnya asyik bereksperimen dengan desain antarmuka (CSS).</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot bg-yellow"><i class="fas fa-lightbulb"></i></div>
+                <div class="timeline-content">
+                    <h3>Kreator Konten & Penceritaan Visual</h3>
+                    <p>Membangun pondasi kreativitas melalui penulisan skenario drama sekolah, perancangan copywriting media sosial, dan pembuatan konten digital yang memadukan visual dengan pesan yang kuat.</p>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    <section id="proyek" class="projects">
+        <h2 class="section-title">Karya & <span>Eksperimen</span> 💡</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-icon bg-yellow">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Web Portofolio!</h3>
+                <p>Membangun identitas digital menggunakan HTML, CSS, dan JS untuk menciptakan web yang seru dan nggak membosankan!</p>
+            </div>
+            <div class="project-card">
+                <div class="project-icon bg-tosca">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Eksperimen Logika</h3>
+                <p>Program pemecah masalah pakai logika Boolean. Cocok banget buat melatih otak biar tidak tumpul saat menghadapi <em>bug</em> yang membandel.</p>
+            </div>
+            <div class="project-card">
+                <div class="project-icon bg-pink">
+                    <i class="fas fa-file-excel"></i>
+                </div>
+                <h3>Otomatisasi Data & Laporan</h3>
+                <p>Bikin format laporan dan pencatatan keuangan menggunakan Google Sheets. Memanfaatkan <strong>checkbox</strong> dan rumus dasar supaya perhitungannya lebih cepat dan terstruktur.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="contact">
+        <h2 class="section-title">Mari <span>Mengobrol!</span> ☕</h2>
+        <div class="contact-container">
+            <p class="contact-subtitle">Punya ide proyek kolaborasi yang gokil? Atau sekadar mau diskusi soal teknologi? Jangan ragu buat menyapa saya!</p>
+            
+            <form class="contact-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Nama Panggilanmu" required>
+                    <input type="email" placeholder="Alamat Email" required>
+                </div>
+                <textarea placeholder="Tulis pesan serumu di sini..." rows="4" required></textarea>
+                <button type="submit" class="btn btn-primary btn-block">Kirim Pesan Terbang 🚀</button>
+            </form>
+            
+            <p class="social-subtitle">Mampir guys, dan terhubung di media sosial saya!</p>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/ifkhrii?mdxt=d3R3MXRycnR3bXc=" target="_blank" rel="noopener noreferrer" class="social-btn instagram" title="Instagram: @ifkhrii"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@ifkhrii?si=4ioXnM60QurojYxA" target="_blank" rel="noopener noreferrer" class="social-btn youtube" title="YouTube: @ifkhrii"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com/fakhrim936" target="_blank" rel="noopener noreferrer" class="social-btn github" title="GitHub: @fakhrim936"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Fakhri Playground. Dibuat dengan secangkir <i class="fas fa-coffee" style="color: #fbbd23;"></i> kopi dan banyak <i class="fas fa-fire" style="color: #f43f5e;"></i> semangat.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <audio id="bgMusic" loop>
+        <source src="dj tante tante.mp3" type="audio/mpeg"> 
+    </audio>
+
+    <button id="musicToggle" class="tombol-volume">
+        <i id="musicIcon" class="fa-solid fa-music"></i>
+    </button>
+
+    <script>
+        const audio = document.getElementById("bgMusic");
+        const musicToggle = document.getElementById("musicToggle");
+        const musicIcon = document.getElementById("musicIcon");
+        const layarKunci = document.getElementById("layarKunci");
+        const tombolBuka = document.getElementById("tombolBuka");
+
+        tombolBuka.addEventListener("click", () => {
+            layarKunci.classList.add("hilang");
+            audio.play();
+            musicIcon.classList.remove("fa-music");
+            musicIcon.classList.add("fa-pause");
+        });
+
+        musicToggle.addEventListener("click", () => {
+            if (audio.paused) {
+                audio.play();
+                musicIcon.classList.remove("fa-music");
+                musicIcon.classList.add("fa-pause");
+            } else {
+                audio.pause();
+                musicIcon.classList.remove("fa-pause");
+                musicIcon.classList.add("fa-music");
+            }
+        });
+    </script>
+</body>
+</html>
